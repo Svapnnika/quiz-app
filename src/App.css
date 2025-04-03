@@ -1,38 +1,124 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
   color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header h1 {
+  margin: 0;
+  font-size: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+main {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Quiz Component Styles */
+.quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.start-screen, .result-screen {
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question-screen {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.timer {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.option-button {
+  padding: 15px;
+  border: 2px solid #ddd;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.option-button:hover {
+  background-color: #f0f0f0;
+}
+
+.option-button.selected {
+  border-color: #3498db;
+  background-color: #ebf5fb;
+}
+
+.next-button, .start-button, .restart-button {
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.next-button:hover, .start-button:hover, .restart-button:hover {
+  background-color: #2980b9;
+}
+
+.next-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .options {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+
+  .quiz-header {
+    flex-direction: column;
+    gap: 10px;
   }
 }
