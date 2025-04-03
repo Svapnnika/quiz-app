@@ -1,11 +1,16 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import "./Quiz.css";
 const questions = [
-  { question: "What is the capital of France?", options: ["Berlin", "Madrid", "Paris", "Rome"], answer: "Paris" },
-  { question: "Which planet is known as the Red Planet?", options: ["Earth", "Mars", "Jupiter", "Venus"], answer: "Mars" },
-  { question: "What is the largest mammal?", options: ["Elephant", "Giraffe", "Blue Whale", "Polar Bear"], answer: "Blue Whale" },
-  { question: "Who painted the Mona Lisa?", options: ["Van Gogh", "Da Vinci", "Picasso", "Michelangelo"], answer: "Da Vinci" },
-  { question: "What is the chemical symbol for gold?", options: ["Go", "Gd", "Au", "Ag"], answer: "Au" }
+  { question: "What does HTML stand for?", options: [ "Hypertext Markup Language","Hightext","Hypertransfer","Markup"], answer: "Hypertext Markup Language" },
+  { question: " Which HTML tag is used to create a hyperlink?", options: ["<link>", "<a>", "<href>", "<url>"], answer: "<a>" },
+  { question: "What property in CSS is used to change text color?", options: ["color", "background color", "background", "text color"], answer: "color" },
+  { question: "Which CSS property makes an element responsive?", options: ["flex", "z-index", "position", "display"], answer: "flex" },
+  { question: "What is the default display type of a <div>?", options: ["block", "inline", "grid", "flex"], answer: "block" },
+  { question: "Which React hook is used for managing state?", options: ["useState", "useEffect", "useRef", "None"], answer: "useState" },
+  { question: "What function is used to create components in React?", options: ["const", "class", "function", "None"], answer: "function" },
+  { question: "Which command creates a new React app?", options: ["npm start", "npx create-react-app", "npm init react-app", " npx react-new-app"], answer: "npx create-react-app" },
+  { question: "What does JSX stand for in React?", options: [" JavaScript XML", " JSON XML", "Java Syntax Extension", "JavaScript XHTML"], answer: " JavaScript XML" },
+  { question: " Which React hook runs after every render?", options: ["useRef", "useState", "useContext", "useEffect"], answer: "useEffect" }
 ];
 
 export default function Quiz() {
@@ -94,7 +99,7 @@ export default function Quiz() {
       {!quizStarted ? (
         <div className="start-screen">
           <h1>Welcome to the Quiz!</h1>
-          <p>Test your knowledge with 5 questions. You have 30 seconds for each question.</p>
+          <p>Test your knowledge with 10 questions. You have 30 seconds for each question.</p>
           <button onClick={startQuiz} className="start-button">Start Quiz</button>
         </div>
       ) : showResult ? (

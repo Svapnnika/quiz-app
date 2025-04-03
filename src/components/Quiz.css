@@ -14,6 +14,11 @@
   align-items: center;
   text-align: center;
 }
+.start-screen h1 {
+  color: #000000; 
+  margin-bottom: 20px;
+}
+
 
 .quiz-header {
   display: flex;
@@ -27,17 +32,17 @@
 }
 
 .timer {
-  color: #e74c3c;
+  color: #da3a4a;
   font-weight: bold;
 }
 
 h1 {
-  color: #2c3e50;
+  color: #e2eaf1;
   margin-bottom: 20px;
 }
 
 h2 {
-  color: #3498db;
+  color: #063c60;
   margin-bottom: 30px;
 }
 
@@ -64,14 +69,14 @@ h2 {
 }
 
 .option-button.selected {
-  background-color: #3498db;
+  background-color: teal;
   color: white;
   border-color: #2980b9;
 }
 
 .start-button, .next-button, .restart-button {
   padding: 12px 24px;
-  background-color: #2ecc71;
+  background-color: teal;
   color: white;
   border: none;
   border-radius: 5px;
@@ -82,7 +87,7 @@ h2 {
 }
 
 .start-button:hover, .next-button:hover, .restart-button:hover {
-  background-color: #27ae60;
+  background-color: #000a04;
 }
 
 .next-button:disabled {
